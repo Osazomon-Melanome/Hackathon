@@ -53,7 +53,7 @@ class Navbar extends Component {
             <span className='mr-2'>
               <ChatBubble />
             </span>
-            Get Recommendation
+            Prompt Recommendation
           </ButtonContainer>
 
           <Link to='/cart' className='ml-auto'>

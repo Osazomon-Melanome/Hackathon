@@ -6,7 +6,7 @@ import Products from './Products'
 import ModalComponent from './Cart/ModalComponent'
 import ReviewCard from './ReviewCard'
 import DetailedArticleCard from './DetailedArticleCard'
-
+import StatCard from './StatCard'
 class ProductList extends Component {
   constructor(props) {
     super(props)
@@ -37,7 +37,21 @@ class ProductList extends Component {
         description: 'Excellent quality and fast delivery.',
         image: 'https://via.placeholder.com/300x200',
       },
-      // Add more card data here
+      {
+        title: 'Jane Rose',
+        description: 'Great product, highly recommended!',
+        image: 'https://via.placeholder.com/300x200', // Replace with your image URL
+      },
+      {
+        title: 'John Doe',
+        description: 'Excellent quality and fast delivery.',
+        image: 'https://via.placeholder.com/300x200',
+      },
+      {
+        title: 'John Doe',
+        description: 'Excellent quality and fast delivery.',
+        image: 'https://via.placeholder.com/300x200',
+      },
     ]
 
     const articles = [
@@ -56,6 +70,22 @@ class ProductList extends Component {
         subtitle: 'A brief description of Article 2.',
         rating: 4,
       },
+      {
+        title: 'Article 1',
+        subtitle: 'A brief description of Article 1.',
+        rating: 5,
+      },
+      {
+        title: 'Article 2',
+        subtitle: 'A brief description of Article 2.',
+        rating: 4,
+      },
+    ]
+
+    const productData = [
+      { title: 'Visitors', value: 1000, percentage: 10 },
+      { title: 'Revenue', value: '$5,000', percentage: 20 },
+      { title: 'Sales', value: 150, percentage: -5 },
     ]
 
     return (
@@ -103,17 +133,23 @@ class ProductList extends Component {
               <ReviewCard data={data} />
             </div>
           </div>
-
           <div className='conatiner'>
             <Title name='Latest' title='Articles' />
             <div className='row'>
               <DetailedArticleCard articles={articles} />
             </div>
           </div>
-          <div className='conatiner'>
-            <Title name='Latest' title='Articles' />
+          <div>
+            <Title name='Performance' title='Metrics' />
             <div className='row'>
-              <DetailedArticleCard articles={articles} />
+              {productData.map((item, index) => (
+                <StatCard
+                  key={index}
+                  title={item.title}
+                  value={item.value}
+                  percentage={item.percentage}
+                />
+              ))}
             </div>
           </div>
         </div>
