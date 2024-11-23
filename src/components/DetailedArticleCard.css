@@ -1,0 +1,50 @@
+.detailed-article-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.detailed-article-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.detailed-article-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.detailed-article-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.detailed-article-rating {
+  margin-top: auto;
+}
+
+.detailed-article-rating .star {
+  color: gold;
+  margin-right: 3px;
+}
+
+.detailed-article-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
